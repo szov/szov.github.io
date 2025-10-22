@@ -3,78 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szov's Cybersecurity Portfolio</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        .about, .competencies, .projects, .mission {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #1e1e1e;
-        }
-        .competency-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .skill-card {
-            background-color: #292929;
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-        .skill-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px neon cyan;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-        }
-        a {
-            color: neon cyan;
-            text-decoration: none;
-        }
-    </style>
+    <title>Szov | Cybersecurity Enthusiast & Ethical Hacker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Szov's Cybersecurity Portfolio</h1>
-    </header>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am Szov, an ethical hacker and digital forensics expert with a passion for uncovering vulnerabilities and securing systems.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home"><span class="logo-text">szov</span><span class="logo-accent">_sec</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#hackviser" class="nav-link">Hackviser</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glitch-container">
+                <h1 class="hero-title glitch" data-text="SZOV">SZOV</h1>
+                <p class="hero-subtitle">Cybersecurity Enthusiast | Computer Science Student | Ethical Hacker</p>
+            </div>
+            <p class="hero-description">Exploring systems, breaking barriers, and building security. Based in Baku, passionate about offensive and defensive security practices.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore</button>
+                <a href="https://github.com/szov" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+            </div>
+            <div class="floating-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+        </div>
+        <canvas id="canvas-bg"></canvas>
     </section>
-    <section class="competencies">
-        <h2>Core Competencies</h2>
-        <div class="competency-grid">
-            <div class="skill-card">Penetration Testing</div>
-            <div class="skill-card">Digital Forensics</div>
-            <div class="skill-card">Incident Response</div>
-            <div class="skill-card">Malware Analysis</div>
-            <div class="skill-card">Vulnerability Assessment</div>
-            <div class="skill-card">CTF Participation</div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="header-line"></div>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Ziya Shalbuzov</strong> - Computer Science student and passionate cybersecurity enthusiast from Baku, Azerbaijan.</p>
+                <p>I'm deeply interested in understanding how systems work, identifying vulnerabilities, and developing security solutions. My journey involves continuous learning, hands-on practice, and contributing to the security community.</p>
+                <p>My expertise spans across:</p>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">⚔️</span> Ethical Hacking & Penetration Testing</li>
+                    <li><span class="skill-icon">🔍</span> Digital Forensics & Incident Response</li>
+                    <li><span class="skill-icon">🛡️</span> Network Security & Infrastructure</li>
+                    <li><span class="skill-icon">🚩</span> Capture-The-Flag (CTF) Challenges</li>
+                    <li><span class="skill-icon">🔐</span> Vulnerability Analysis & Risk Assessment</li>
+                    <li><span class="skill-icon">💻</span> Malware Analysis & Reverse Engineering</li>
+                </ul>
+                <p>I'm building a strong foundation to contribute to open-source security projects and help make technology safer for everyone.</p>
+            </div>
+            <div class="about-visual">
+                <div class="tech-stack">
+                    <div class="tech-item" style="--i: 1;">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item" style="--i: 2;">
+                        <span>Bash</span>
+                    </div>
+                    <div class="tech-item" style="--i: 3;">
+                        <span>C/C++</span>
+                    </div>
+                    <div class="tech-item" style="--i: 4;">
+                        <span>Kali Linux</span>
+                    </div>
+                    <div class="tech-item" style="--i: 5;">
+                        <span>Metasploit</span>
+                    </div>
+                    <div class="tech-item" style="--i: 6;">
+                        <span>Wireshark</span>
+                    </div>
+                    <div class="tech-item" style="--i: 7;">
+                        <span>Burp Suite</span>
+                    </div>
+                    <div class="tech-item" style="--i: 8;">
+                        <span>GDB</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="projects">
-        <h2>Featured Projects</h2>
-        <p>Check out my CTF write-ups and vulnerability analyses on my GitHub.</p>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>GitHub Projects</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="projects-info">
+            <p class="projects-intro">Currently maintaining <strong>3 public repositories</strong> on GitHub. Check them out below:</p>
+            <a href="https://github.com/szov" target="_blank" class="btn btn-secondary">View All on GitHub →</a>
+        </div>
+
+        <div class="github-projects" id="githubProjects">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading GitHub projects...
+            </div>
+        </div>
     </section>
-    <section class="mission">
-        <h2>My Mission</h2>
-        <p>To enhance cybersecurity across various platforms while educating others on the importance of digital safety.</p>
+
+    <!-- Hackviser Profile Section -->
+    <section id="hackviser" class="hackviser-section">
+        <div class="section-header">
+            <h2>Hackviser Profile</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="hackviser-content">
+            <div class="hackviser-card">
+                <div class="hackviser-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Security Assessments & CTF Challenges</h3>
+                <p>Track my progress, achievements, and security assessments on Hackviser. Participate in challenges and grow your security skills.</p>
+                <div class="hackviser-stats">
+                    <p>Platform: <strong>Hackviser</strong></p>
+                    <p>Focus: Security Research & CTF</p>
+                </div>
+                <a href="https://app.hackviser.com/profile" target="_blank" class="btn btn-primary">Visit Hackviser Profile →</a>
+            </div>
+
+            <div class="hackviser-info">
+                <h3>Why Hackviser?</h3>
+                <p>Hackviser is an innovative platform for cybersecurity professionals and enthusiasts to showcase their skills, participate in security assessments, and connect with the global security community. It provides:</p>
+                <ul class="hackviser-features">
+                    <li><i class="fas fa-check-circle"></i> Real-world security challenges</li>
+                    <li><i class="fas fa-check-circle"></i> Skill verification and badges</li>
+                    <li><i class="fas fa-check-circle"></i> Professional networking opportunities</li>
+                    <li><i class="fas fa-check-circle"></i> Security research collaboration</li>
+                    <li><i class="fas fa-check-circle"></i> Job opportunities in cybersecurity</li>
+                </ul>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>Connect with me on <a href="https://github.com/szov">GitHub</a> | <a href="https://twitter.com/szov">Twitter</a></p>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>3</h3>
+                <p>Public GitHub Repositories</p>
+            </div>
+            <div class="stat-box">
+                <h3>0</h3>
+                <p>Followers</p>
+            </div>
+            <div class="stat-box">
+                <h3>0</h3>
+                <p>Following</p>
+            </div>
+            <div class="stat-box">
+                <h3>CS</h3>
+                <p>Computer Science Student</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Let's Connect</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="contact-content">
+            <p>I'm always open to discussions about security, collaborations on projects, or just geeking out about cybersecurity.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/szov" target="_blank">github.com/szov</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Hackviser</h4>
+                    <p><a href="https://app.hackviser.com/profile" target="_blank">Hackviser Profile</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>Baku, Azerbaijan</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Education</h4>
+                    <p>Computer Science Student</p>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Szov - Ziya Shalbuzov. Building security, one byte at a time.</p>
+        <div class="footer-links">
+            <a href="https://github.com/szov" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://app.hackviser.com/profile" target="_blank"><i class="fas fa-shield-alt"></i> Hackviser</a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
