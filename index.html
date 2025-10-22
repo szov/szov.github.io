@@ -4,44 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szov's Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        .about, .competencies, .projects, .mission {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+        }
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .skill-card {
+            background-color: #292929;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px neon cyan;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        a {
+            color: neon cyan;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Szov's Cybersecurity Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#ctf-projects">CTF Projects</a></li>
-            </ul>
-        </nav>
+        <h1>Szov's Cybersecurity Portfolio</h1>
     </header>
-    <section id="bio">
-        <h2>Bio</h2>
-        <p>Hi, I'm Szov, a passionate cybersecurity professional with a focus on protecting systems and networks. I have experience in various cybersecurity domains and am dedicated to continuous learning and improvement.</p>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am Szov, an ethical hacker and digital forensics expert with a passion for uncovering vulnerabilities and securing systems.</p>
     </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Penetration Testing</li>
-            <li>Network Security</li>
-            <li>Incident Response</li>
-            <li>Threat Analysis</li>
-            <li>CTF Competitions</li>
-        </ul>
+    <section class="competencies">
+        <h2>Core Competencies</h2>
+        <div class="competency-grid">
+            <div class="skill-card">Penetration Testing</div>
+            <div class="skill-card">Digital Forensics</div>
+            <div class="skill-card">Incident Response</div>
+            <div class="skill-card">Malware Analysis</div>
+            <div class="skill-card">Vulnerability Assessment</div>
+            <div class="skill-card">CTF Participation</div>
+        </div>
     </section>
-    <section id="ctf-projects">
-        <h2>CTF Projects</h2>
-        <p>Here are some of the Capture The Flag (CTF) projects I've participated in:</p>
-        <ul>
-            <li><strong>Project 1:</strong> Description of project 1.</li>
-            <li><strong>Project 2:</strong> Description of project 2.</li>
-            <li><strong>Project 3:</strong> Description of project 3.</li>
-        </ul>
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <p>Check out my CTF write-ups and vulnerability analyses on my GitHub.</p>
+    </section>
+    <section class="mission">
+        <h2>My Mission</h2>
+        <p>To enhance cybersecurity across various platforms while educating others on the importance of digital safety.</p>
     </section>
     <footer>
-        <p>Contact: szov@example.com</p>
+        <p>Connect with me on <a href="https://github.com/szov">GitHub</a> | <a href="https://twitter.com/szov">Twitter</a></p>
     </footer>
 </body>
 </html>
