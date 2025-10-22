@@ -886,6 +886,8 @@ body {
 }
 
 /* Responsive */
+/* Keep everything the same until line 948, then replace with: */
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -946,26 +948,26 @@ body {
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    @media (max-width: 480px) {
-        .stats-container {
-            grid-template-columns: 1fr;
-        }
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
 
-        .hero-buttons {
-            flex-direction: column;
-        }
+    .hero-buttons {
+        flex-direction: column;
+    }
 
-        .btn {
-            width: 100%;
-        }
+    .btn {
+        width: 100%;
+    }
 
-        .section-header h2 {
-            font-size: 1.5rem;
-        }
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
 
-        .hero-title {
-            font-size: 2rem;
-        }
+    .hero-title {
+        font-size: 2rem;
     }
 }
